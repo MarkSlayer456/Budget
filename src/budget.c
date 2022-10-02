@@ -110,7 +110,7 @@ info_t *get_info(float month, float year) {
 	strcat(file_name, year_str);
 	strcat(file_name, ".csv");
 	
-	FILE *f = fopen(file_name, "r");
+	FILE *f = fopen(file_name, "r+");
 	info_t *new = (info_t *)malloc(sizeof(info_t));
 	new->nodes = (info_node_t **)malloc(sizeof(info_node_t *) * MAX_RECEIPTS);
 	//memset(new->nodes, 0, sizeof(info_node_t *) * MAX_RECEIPTS);
